@@ -56,13 +56,33 @@
 
 // CODE:
 
-
 let customerDictionary = {"Fred":"AliPay", "Bill":"WeChatPay", "Amy":"Cash", "Joan":"Credit Card", "Don":"WeChatPay", "Luis":"WeChatPay",};
+let totalCustomers = 6.0;
+let weChatPayUsers = 0.0;
+let cashUsers = 0.0;
+let aliPayUsers = 0.0;
+let creditCardUsers = 0.0;
 
-let totalCustomers = 0;
-let weChatPayUsers = 0;
-let aliPayUsers = 0;
+for (var key in customerDictionary) {
+    if (customerDictionary[key] = "AliPay") {
+        aliPayUsers++;
+        console.log("One AliPay customer.")
+    } else if (customerDictionary[key] = "WeChatPay") {
+        weChatPayUsers++;
+        console.log("One WeChat customer.")
+    } else if (customerDictionary[key] = "Cash") {
+        cashUsers++;
+        console.log("One Cash customer.")
+    } else if (customerDictionary[key] = "Credit Card") {
+        creditCardUsers++;
+        console.log("One Credit Card customer.")
+    }
+}
 
-let currentCustomer = "Fred";
+console.log(`Percentage of customers that we are AliPay users: ` + aliPayUsers / totalCustomers);
+console.log(`Percentage of customers that we are WeChatPay users: ` + weChatPayUsers / totalCustomers);
+console.log(`Percentage of customers that we are cash users: ` + cashUsers / totalCustomers);
+console.log(`Percentage of customers that we are credit card users: ` + creditCardUsers / totalCustomers);
 
-let customers = {["Fred", "String"] }
+
+
